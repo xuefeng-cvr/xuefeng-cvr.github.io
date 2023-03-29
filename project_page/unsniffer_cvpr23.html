@@ -142,7 +142,7 @@
             <ul>
                 <li><a href="https://xuefengbupt.github.io/">Home</a></li>
                 <li><a href="http://www.vrobotit.cn/">Laboratory</a></li>
-                <!-- <li><a href="mailto:xuefeng@bupt.edu.cn">Contact</a></li> -->
+                <li><a href="mailto:xuefeng@bupt.edu.cn">xuefeng_AT_bupt</a></li>
             </ul>
         </nav>
     </header>
@@ -158,7 +158,7 @@
             <img src="img/github.png"
                 alt="Code" width="50" height="50"></a>
         &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;
-        <a href="NULL" target="_blank">
+        <a href="https://drive.google.com/drive/folders/1Mh4xseUq8jJP129uqCvG9cSLdjqdl0Jo?usp=sharing" target="_blank">
             <img src="img/googledrive.png" alt="Dataset" width="50"
                 height="50"></a>
     </div>
@@ -166,14 +166,16 @@
         <iframe width="560" height="315" src="https://www.youtube.com/embed/AI2mfO2CycM" frameborder="0"
             allow="autoplay; encrypted-media" allowfullscreen></iframe>
     </div>
-    <div id="demo" style="display: flex; justify-content: center;margin-bottom: 20px;">
-        <video id="media" width="400" height="300" controls autoplay>
+    <div id="demo" style="display: flex; justify-content: center; margin-bottom: 20px;">
+        <img src="img/unsniffer_demo1.gif" width="305" style="margin-right: 30px;">
+        <img src="img/unsniffer_demo2.gif" width="400" style="margin-left: 30px;">
+        <!-- <video id="media" width="400" height="300" controls autoplay>
         <source src="img/unsniffer_demo1.WebM" type="video/webm">
         </video>
         &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;
         <video id="media" width="533" height="300" controls autoplay>
         <source src="img/unsniffer_demo2.WebM" type="video/webm">
-        </video>
+        </video> -->
     </div>
     <div id="maintext">
         <h2>Main contributions of UnSniffer</h2>
@@ -187,9 +189,9 @@
 
         <p style="font-size: 17px;">In the proposed UOD-Benchmark, we use the Pascal VOC dataset as the training data that contains annotations of 20 object categories. For testing, since the MS-COCO dataset extends the PASCAL VOC categories to 80 object categories, we naturally employ MS-COCO to evaluate unknown objects. However, MS-COCO does not thoroughly label potential unknown objects in images. To address this issue, we propose two datasets, i.e., COCO-OOD and COCO-Mixed, which fully label the unknown objects. Firstly, according to the definition of objects in COCO, i.e. "objects are individual instances that can be easily labelled (person, chair, car)", we hand-pick more than a thousand images that have no area confused with this definition. Secondly, several master students are asked to mark the object regions they got at first glance by drawing polygons, referring to the object definition above. As shown in the figure, we label almost every object in the selected images with fine-grained annotation. Finally, we have two datasets both for testing as follows: </p>
 
-        <p style="font-size: 17px;"> · <b>COCO-OOD dataset</b> contains only unknown categories, consisting of 504 images with ﬁne-grained annotations of 1655 unknown objects. All annotations consist of original annotations in COCO and the augmented annotations on the basis of the COCO definition.</p> 
+        <p style="font-size: 17px;"> ● <b>COCO-OOD dataset</b> contains only unknown categories, consisting of 504 images with ﬁne-grained annotations of 1655 unknown objects. All annotations consist of original annotations in COCO and the augmented annotations on the basis of the COCO definition.</p> 
         
-        <p style="font-size: 17px;"> · <b>COCO-Mixed dataset</b> includes 897 images with annotations of both known and unknown categories. It contains 2533 unknown objects and 2658 known objects, with original COCO annotations used as labels for known objects. Unambiguous unlabeled objects are also annotated. The dataset is more challenging to evaluate due to the images containing more object instances with complex categories and concentrated locations.</p> 
+        <p style="font-size: 17px;"> ● <b>COCO-Mixed dataset</b> includes 897 images with annotations of both known and unknown categories. It contains 2533 unknown objects and 2658 known objects, with original COCO annotations used as labels for known objects. Unambiguous unlabeled objects are also annotated. The dataset is more challenging to evaluate due to the images containing more object instances with complex categories and concentrated locations.</p> 
             
     </div>
 
@@ -208,10 +210,10 @@
 
     <pre>
 @inproceedings{liang2023unknown,
-title={Unknown Sniffer for Object Detection: Don't Turn a Blind Eye to Unknown Objects},
-author={Liang, Wenteng and Xue, Feng and Liu, Yihao and Zhong, Guofeng and Ming, Anlong},
-booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
-year={2023}
+    title={Unknown Sniffer for Object Detection: Don't Turn a Blind Eye to Unknown Objects},
+    author={Liang, Wenteng and Xue, Feng and Liu, Yihao and Zhong, Guofeng and Ming, Anlong},
+    booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+    year={2023}
 }</pre>
 
     <div style="text-align: center;"><p>Powered by ChatGPT</p></div>
