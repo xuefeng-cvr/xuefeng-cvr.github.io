@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Unknown Sniffer for Object Detection: Don't Turn a Blind Eye to Unknown Objects</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins&display=swap">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.5;
+        }
+
+        /* Header styling */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #2c50dd;
+            color: #fff;
+            padding: 1rem;
+        }
+
+        #logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            justify-content: flex-end;
+        }
+
+        nav li {
+            margin: 0 1rem;
+        }
+
+        /* Heading styling */
+        h1,
+        h2 {
+            text-align: center;
+            margin: 2rem 1rem;
+            font-weight: bold;
+            color: #2c50dd;
+        }
+
+        /* Paragraph styling */
+        p {
+            font-size: 1.2rem;
+            margin: 2rem 0;
+            text-align: justify;
+            text-justify: inter-word;
+        }
+
+        /* Code block styling */
+        pre {
+            text-justify: inter-word;
+            text-align: justify;
+            font-size: 0.8rem;
+            margin: 2rem 0;
+            background-color: #f5f5f5;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+        /* Video container styling */
+        #video {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 50px;
+        }
+
+        #maintext {
+            margin-left: 200px;
+            margin-right: 200px;
+        }
+
+
+        #thanks {
+            text-align: justify;
+        }
+
+        iframe {
+            border: none;
+            max-width: 100%;
+        }
+
+        /* Centered content styling */
+        .center {
+            text-align: center;
+        }
+
+        /* Image styling */
+        img {
+            display: block;
+            margin: auto;
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); */
+        }
+
+        /* Link styling */
+        a {
+            color: #7e7e7e;
+            text-decoration: none;
+            transition: all 0.3s ease-in-out;
+        }
+
+        a:hover {
+            color: #f9a602;
+        }
+
+        /* Button styling */
+        button {
+            background-color: #02a828;
+            color: #fff;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+        }
+
+        button:hover {
+            background-color: #f9a602;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div id="logo">Unknown Sniffer</div>
+        <nav>
+            <ul>
+                <li><a href="https://xuefeng-cvr.github.io/">Home</a></li>
+                <li><a href="http://www.vrobotit.cn/">Laboratory</a></li>
+                <li><a href="mailto:xuefeng@bupt.edu.cn">xuefeng_AT_bupt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <h1>Unknown Sniffer for Object Detection: Don't Turn a Blind Eye to Unknown Objects</h1>
+    <div id="authors" style="text-align: center; justify-content: center;">
+        <h3><em>Wenteng Liang*, Feng Xue*, Yihao Liu, Guofeng Zhong, Anlong Ming (* equal contribution)</em></h3>
+        <h3><em>Beijing University of Posts and Telecommunications</em></h3>
+            <h2><b>IEEE/CVF Conference on Computer Vision and Pattern Recognition 2023</b></h2>
+    </div>
+
+    <div id="links" style="display: flex; justify-content: center;margin-bottom: 20px;">
+        <div style="justify-content: center;">
+        <a href="https://github.com/Went-Liang/UnSniffer" target="_blank">
+            <img src="img/github.png"
+                alt="Code" width="50" height="50"></a>
+                <h3><a href="https://github.com/Went-Liang/UnSniffer" target="_blank"> Code </a></h3>
+        </div>
+        &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;
+        <div>
+        <a href="https://drive.google.com/drive/folders/1Mh4xseUq8jJP129uqCvG9cSLdjqdl0Jo?usp=sharing" target="_blank">
+            <img src="img/googledrive.png"
+                alt="Dataset" width="58" height="50"></a>
+        <h3><a href="https://drive.google.com/drive/folders/1Mh4xseUq8jJP129uqCvG9cSLdjqdl0Jo?usp=sharing" target="_blank"> Datasets</a></h3>
+        </div>
+        &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;
+        <div>
+        <a href="https://arxiv.org/abs/2303.13769" target="_blank">
+            <img src="img/paper_img.png"
+                alt="ArXiv" width="40" height="50"></a>
+        <h3><a href="https://arxiv.org/abs/2303.13769" target="_blank"> Paper</a></h3>
+        </div>
+
+        &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;
+        <div>
+        <a href="https://docs.google.com/presentation/d/1YUxG_NnjeIiSZjHpIgS9wtETqZQ1MD0s/edit?usp=sharing&ouid=104225774732865902245&rtpof=true&sd=true" target="_blank">
+            <img src="img/slide_img.png"
+                alt="Slides" width="55" height="50"></a>
+        <h3><a href="https://docs.google.com/presentation/d/1YUxG_NnjeIiSZjHpIgS9wtETqZQ1MD0s/edit?usp=sharing&ouid=104225774732865902245&rtpof=true&sd=true" target="_blank">Slides</a></h3>
+        </div>
+
+
+        &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;
+        <div>
+        <a href="https://xuefeng-cvr.github.io/project_page/pdf/supplementary_cvpr2023.pdf" target="_blank">
+            <img src="img/supplementary_img.png"
+                alt="Supplementary" width="40" height="50"></a>
+                <h3><a href="https://xuefeng-cvr.github.io/project_page/pdf/supplementary_cvpr2023.pdf" target="_blank"> Supplementary</a></h3>
+            </div>
+    </div>
+
+
+    <div id="video" style="text-align: center;">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/AI2mfO2CycM" frameborder="0"
+            allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
+    <div id="demo" style="display: flex; justify-content: center; margin-bottom: 20px;">
+        <img src="img/unsniffer_demo1.gif" width="305" style="margin-right: 30px;">
+        <img src="img/unsniffer_demo2.gif" width="400" style="margin-left: 30px;">
+        <!-- <video id="media" width="400" height="300" controls autoplay>
+        <source src="img/unsniffer_demo1.WebM" type="video/webm">
+        </video>
+        &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;
+        <video id="media" width="533" height="300" controls autoplay>
+        <source src="img/unsniffer_demo2.WebM" type="video/webm">
+        </video> -->
+    </div>
+    <div id="maintext">
+        <h2>Main contributions of UnSniffer</h2>
+        <img src="./img/unsniffer_main.png" , style="width: 80%;">
+        <p style="font-size: 17px;">The recently proposed open-world object and open-set detection have achieved a breakthrough in finding never-seen-before objects and distinguishing them from known ones. However, their studies on knowledge transfer from known classes to unknown ones are not deep enough, resulting in the scanty capability for detecting unknowns hidden in the background. In this paper, we propose the unknown sniffer (UnSniffer) to find both unknown and known objects. Firstly, the generalized object confidence (GOC) score is introduced, which only uses known samples for supervision and avoids improper suppression of unknowns in the background. Significantly, such confidence score learned from known objects can be generalized to unknown ones. Additionally, we propose a negative energy suppression loss to further suppress the non-object samples in the background. Next, the best box of each unknown is hard to obtain during inference due to lacking their semantic information in training. To solve this issue, we introduce a graph-based determination scheme to replace hand-designed non-maximum suppression (NMS) post-processing.</p>
+    </div>
+
+    <div id="maintext">
+        <h2>Unknown Object Detection Benchmark</h2>
+        <img src="./img/unsniffer_uod.png", style="width: 50%;">
+
+        <p style="font-size: 17px;">In the proposed UOD-Benchmark, we use the Pascal VOC dataset as the training data that contains annotations of 20 object categories. For testing, since the MS-COCO dataset extends the PASCAL VOC categories to 80 object categories, we naturally employ MS-COCO to evaluate unknown objects. However, MS-COCO does not thoroughly label potential unknown objects in images. To address this issue, we propose two datasets, i.e., COCO-OOD and COCO-Mixed, which fully label the unknown objects. Firstly, according to the definition of objects in COCO, i.e. "objects are individual instances that can be easily labelled (person, chair, car)", we hand-pick more than a thousand images that have no area confused with this definition. Secondly, several master students are asked to mark the object regions they got at first glance by drawing polygons, referring to the object definition above. As shown in the figure, we label almost every object in the selected images with fine-grained annotation. Finally, we have two datasets both for testing as follows: </p>
+
+        <p style="font-size: 17px;"> ● <b>COCO-OOD dataset</b> contains only unknown categories, consisting of 504 images with ﬁne-grained annotations of 1655 unknown objects. All annotations consist of original annotations in COCO and the augmented annotations on the basis of the COCO definition.</p> 
+        
+        <p style="font-size: 17px;"> ● <b>COCO-Mixed dataset</b> includes 897 images with annotations of both known and unknown categories. It contains 2533 unknown objects and 2658 known objects, with original COCO annotations used as labels for known objects. Unambiguous unlabeled objects are also annotated. The dataset is more challenging to evaluate due to the images containing more object instances with complex categories and concentrated locations.</p> 
+            
+    </div>
+
+
+    <div id="maintext">
+        <h2>Visualization results</h2>
+        <img src="./img/unsniffer_result.png">
+    </div>
+
+
+    <div id="maintext">
+        <h2>More visualization results </h2>
+        <img src="./img/unsniffer_moreresult.png">
+    </div>
+
+
+    <pre>
+@inproceedings{liang2023unknown,
+    title={Unknown Sniffer for Object Detection: Don't Turn a Blind Eye to Unknown Objects},
+    author={Liang, Wenteng and Xue, Feng and Liu, Yihao and Zhong, Guofeng and Ming, Anlong},
+    booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+    year={2023}
+}</pre>
+
+    <div style="text-align: center;"><p>Powered by ChatGPT</p></div>
+
+</body>
+
+</html>
