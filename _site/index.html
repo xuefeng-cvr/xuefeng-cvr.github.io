@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <!-- Head -->
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">    <!-- Metadata, OpenGraph and Schema.org -->
+    
+
+    <!-- Standard metadata -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Feng Xue 薛峰</title>
+    <meta name="author" content="Feng  Xue">
+    <meta name="description" content="Since 2017, I have been focusing on open-world visual perception using a monocular camera, which is applied to scenarios such as autonomous driving and robotics. To this end, during my master's study, I focused on &lt;b&gt;perceiving tiny anomalous objects&lt;/b&gt; in autonomous driving scenarios using low-level visual primitives and mid-level visual representations. During my PhD study, I devoted to introducing the 3D scene structure and the scene context into the open-world visual perception by estimating metric depth and detecting the free space of autonomous driving.
+">
+    <meta name="keywords" content="Computer vision, Robotics, Monocular Depth Estimation, Open-world object detection">
+
+
+    <!-- Bootstrap & MDB -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-DF7Zhf293AJxJNTmh5zhoYYIMs2oXitRfBjY+9L//AY=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/css/mdb.min.css" integrity="sha256-jpjYvU3G3N6nrrBwXJoVEYI/0zw8htfFnhT9ljN3JJw=" crossorigin="anonymous">
+
+    <!-- Bootstrap Table -->
+    <link defer rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.21.4/dist/bootstrap-table.min.css">
+
+    <!-- Fonts & Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.1/css/academicons.min.css" integrity="sha256-i1+4qU2G2860dGGIOJscdC30s9beBXjFfzjWLjBRsBg=" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons">
+
+    <!-- Code Syntax Highlighting -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jwarby/jekyll-pygments-themes@master/github.css" media="" id="highlight_theme_light">
+
+    
+
+    <!-- Styles -->
+    
+    <link rel="shortcut icon" href="/assets/img/pageicon.png">
+    
+    <link rel="stylesheet" href="/assets/css/main.css?d41d8cd98f00b204e9800998ecf8427e">
+    <link rel="canonical" href="http://localhost:4000/">
+
+    <!-- Dark Mode -->
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jwarby/jekyll-pygments-themes@master/native.css" media="none" id="highlight_theme_dark">
+    <script src="/assets/js/theme.js?96d6b3e1c3604aca8b6134c7afdd5db6"></script>
+    <script src="/assets/js/dark_mode.js?9b17307bb950ffa2e34be0227f53558f"></script>
+    
+
+  </head>
+
+  <!-- Body -->
+  <body class="fixed-top-nav ">
+
+    <!-- Header -->
+    <header>
+
+      <!-- Nav Bar -->
+      <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top">
+        <div class="container">
+          
+          <!-- Navbar Toggle -->
+          <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar top-bar"></span>
+            <span class="icon-bar middle-bar"></span>
+            <span class="icon-bar bottom-bar"></span>
+          </button>
+
+          <div class="collapse navbar-collapse text-right" id="navbarNav">
+            <ul class="navbar-nav ml-auto flex-nowrap">
+
+              <!-- About -->
+              <li class="nav-item active">
+                <a class="nav-link" href="/">Home<span class="sr-only">(current)</span></a>
+              </li>
+
+
+              
+              <!-- Blog -->
+              <li class="nav-item ">
+                  <a class="nav-link" href="/blog/">blog</a>
+              </li>
+
+              <!-- Other pages -->
+              <!-- Other pages -->
+              <li class="nav-item ">
+                
+                  <a class="nav-link" href="/publications/">publications</a>
+                
+              </li>
+              <li class="nav-item ">
+                
+              </li>
+
+              <!-- Toogle theme mode -->
+              <li class="toggle-container">
+                <button id="light-toggle" title="Change theme">
+                  <i class="fas fa-moon"></i>
+                  <i class="fas fa-sun"></i>
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Scrolling Progress Bar -->
+      <progress id="progress" value="0">
+        <div class="progress-container">
+          <span class="progress-bar"></span>
+        </div>
+      </progress>
+    </header>
+
+
+    <!-- Content -->
+    <div class="container mt-5">
+      
+        <!-- about.html -->
+      <div class="post">
+        <header class="post-header">
+          <h1 class="post-title">
+            Feng Xue 薛峰
+          </h1>
+          <p class="desc">Beijing University of Posts and Telecommunications (BUPT), Ph.D.</p>
+        </header>
+
+        <article>
+          <div class="profile float-left">
+
+              <figure>
+
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/avatar-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/avatar-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/avatar-1400.webp"></source>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/avatar.png?9f465c4d7e6b9414671e71955c9982be" class="img-fluid z-depth-1 rounded-circle" width="auto" height="auto" alt="avatar.png" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+  </picture>
+
+</figure>
+
+            <div class="address">
+              <p>No.10 Xitucheng Road</p> <p>Beijing, China, 100876</p>
+
+            </div>
+          </div>
+
+          <div class="clearfix">
+            <!-- Feng Xue will be a postdoctoral researcher working with Prof. [Nicu Sebe](http://disi.unitn.it/~sebe/) at the [Multimedia and Human Understanding Group (MHUG)](http://mhug.disi.unitn.it/), University of Trento, Italy. -->
+<p>Previously, he earned his Ph.D. degree in computer science and technology (2023) from the Beijing University of Posts and Telecommunications (BUPT),
+and his MA.Eng. degree in computer technology (2019) from BUPT, China.
+His Ph.D. thesis advisor is Prof. <a href="http://www.vrobotit.cn/~mal" rel="external nofollow noopener" target="_blank">Anlong Ming</a>,
+and he also works closely with Prof. <a href="https://yuzhou.vlrlab.net/" rel="external nofollow noopener" target="_blank">Yu Zhou</a>.
+His research interests lie in <strong>Open-World Visual Perception</strong> for Robots and <strong>Open-Domain Generalization</strong>.</p>
+
+<!-- Since 2017, I have been focusing on **open-world visual perception using a monocular camera**, which is applied to scenarios such as autonomous driving and robotics. To this end, during my master's study, I focused on **perceiving tiny anomalous objects** in autonomous driving scenarios using low-level visual primitives and mid-level visual representations. During my PhD study, I devoted to introducing the 3D scene structure and the scene context into the open-world visual perception by **estimating metric depth and detecting the free space of autonomous driving**. -->
+
+<!-- 
+Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+
+Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+
+Link to your social media connections, too. This theme is set up to use [Font Awesome icons](http://fortawesome.github.io/Font-Awesome/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them. -->
+
+          </div>
+
+                    <!-- Social -->
+                    <div class="social">
+                      <div class="contact-icons">
+                        <a href="mailto:%78%75%65%66%65%6E%67%62%75%70%74@%67%6D%61%69%6C.%63%6F%6D" title="Gmail"><i class="fa-brands fa-google"></i></a>
+            <a href="mailto:%78%75%65%66%65%6E%67@%62%75%70%74.%65%64%75.%63%6E" title="email2"><i class="fas fa-envelope"></i></a>
+            <a href="https://scholar.google.com/citations?user=66SeiQsAAAAJ" title="Google Scholar" rel="external nofollow noopener" target="_blank"><i class="ai ai-google-scholar"></i></a>
+            <a href="https://github.com/xuefeng-cvr" title="GitHub" rel="external nofollow noopener" target="_blank"><i class="fab fa-github"></i></a>
+            
+
+                      </div>
+                      
+                      <div class="contact-note">
+                        
+                      </div>
+        
+                    </div>
+
+          <!-- News -->
+          <h2><a href="/news/" style="color: inherit;">news</a></h2>          <div class="news">
+            <div class="table-responsive" style="max-height: 60vw">
+              <table class="table table-sm table-borderless">
+              
+                <tr>
+                  <th scope="row">10.2023</th>
+                  <td>
+                    Our work <em>Indoor Obstacle Discovery on Reflective Ground via Monocular Camera</em> has been accepted by <strong>International Journal of Computer Vision 2023</strong> !
+
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">10.2023</th>
+                  <td>
+                    Our work <em>Occlusion Relationship Reasoning with A Feature Separation and Interaction Network</em> has been accepted by <strong>Visual Intelligence 2023</strong> !
+
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">03.2023</th>
+                  <td>
+                    Our work <em>Unknown Sniffer for Object Detection: Don’t Turn a Blind Eye to Unknown Objects</em> has been accepted by <strong>IEEE Conference on Computer Vision and Pattern Recognition 2023</strong> !
+
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">04.2022</th>
+                  <td>
+                    Our work <em>MARF: Multi-scale Adaptive-switch Random Forest for Leg Detection with 2D Laser Scanners</em> has been accepted by <strong>IEEE Transactions on Cybernetics 2023</strong> !
+
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">02.2022</th>
+                  <td>
+                    Two papers have been accepted by <strong>IEEE International Conference on Robotics and Automation 2022</strong> !
+
+<!-- Announcements and news can be much longer than just quick inline posts. In fact, they can have all the features available for the standard blog posts. See below.
+
+***
+
+Jean shorts raw denim Vice normcore, art party High Life PBR skateboard stumptown vinyl kitsch. Four loko meh 8-bit, tousled banh mi tilde forage Schlitz dreamcatcher twee 3 wolf moon. Chambray asymmetrical paleo salvia, sartorial umami four loko master cleanse drinking vinegar brunch. <a href="https://www.pinterest.com">Pinterest</a> DIY authentic Schlitz, hoodie Intelligentsia butcher trust fund brunch shabby chic Kickstarter forage flexitarian. Direct trade <a href="https://en.wikipedia.org/wiki/Cold-pressed_juice">cold-pressed</a> meggings stumptown plaid, pop-up taxidermy. Hoodie XOXO fingerstache scenester Echo Park. Plaid ugh Wes Anderson, freegan pug selvage fanny pack leggings pickled food truck DIY irony Banksy.
+
+#### Hipster list
+<ul>
+    <li>brunch</li>
+    <li>fixie</li>
+    <li>raybans</li>
+    <li>messenger bag</li>
+</ul>
+
+Hoodie Thundercats retro, tote bag 8-bit Godard craft beer gastropub. Truffaut Tumblr taxidermy, raw denim Kickstarter sartorial dreamcatcher. Quinoa chambray slow-carb salvia readymade, bicycle rights 90's yr typewriter selfies letterpress cardigan vegan.
+
+***
+
+Pug heirloom High Life vinyl swag, single-origin coffee four dollar toast taxidermy reprehenderit fap distillery master cleanse locavore. Est anim sapiente leggings Brooklyn ea. Thundercats locavore excepteur veniam eiusmod. Raw denim Truffaut Schlitz, migas sapiente Portland VHS twee Bushwick Marfa typewriter retro id keytar.
+
+> We do not grow absolutely, chronologically. We grow sometimes in one dimension, and not in another, unevenly. We grow partially. We are relative. We are mature in one realm, childish in another.
+> —Anais Nin
+
+Fap aliqua qui, scenester pug Echo Park polaroid irony shabby chic ex cardigan church-key Odd Future accusamus. Blog stumptown sartorial squid, gastropub duis aesthetic Truffaut vero. Pinterest tilde twee, odio mumblecore jean shorts lumbersexual. -->
+
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+
+          <!-- Latest posts -->
+          
+
+          <!-- Selected papers -->
+          <h2><a href="/publications/" style="color: inherit;">selected publications</a></h2>
+          <div class="publications">
+            <h2 class="bibliography">2023</h2>
+<ol class="bibliography">
+<li>
+<!-- _layouts/bib.html -->
+      <div class="row">
+        <div class="col-sm-2">
+<div class="abbr"><abbr class="badge"><a href="https://openaccess.thecvf.com/menu" rel="external nofollow noopener" target="_blank">CVPR</a></abbr></div>
+<div class="preview">
+              <figure>
+
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/publication_preview/unsniffer.gif-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/publication_preview/unsniffer.gif-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/publication_preview/unsniffer.gif-1400.webp"></source>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/publication_preview/unsniffer.gif" class="preview z-depth-1 rounded" width="auto" height="auto" alt="unsniffer.gif" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+  </picture>
+
+</figure>
+</div>
+</div>
+
+        <!-- Entry bib key -->
+        <div id="unsniffer" class="col-sm-8">
+        <!-- Title -->
+        <div class="title">Unknown Sniffer for Object Detection: Don’t Turn a Blind Eye to Unknown Objects</div>
+        <!-- Author -->
+        <div class="author">
+        
+
+        Wenteng Liang✝, Feng Xue✝, Yihao Liu, and
+          <span class="more-authors" title="click to view 2 more authors" onclick="
+                var element = $(this);
+                element.attr('title', '');
+                var more_authors_text = element.text() == '2 more authors' ? 'Guofeng Zhong, Anlong Ming' : '2 more authors';
+                var cursorPosition = 0;
+                var textAdder = setInterval(function(){
+                  element.text(more_authors_text.substring(0, cursorPosition + 1));
+                  if (++cursorPosition == more_authors_text.length){
+                    clearInterval(textAdder);
+                  }
+              }, '10');
+              ">2 more authors</span>
+</div>
+
+        <!-- Journal/Book title and date -->
+        
+        
+        <div class="periodical">
+          <em>In IEEE Conference on Computer Vision and Pattern Recognition (CVPR)</em>, 2023
+        </div>
+        <div class="periodical">
+          
+        </div>
+
+          <!-- Links/Buttons -->
+          <div class="links">
+            <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a>
+            <a href="https://openaccess.thecvf.com/content/CVPR2023/papers/Liang_Unknown_Sniffer_for_Object_Detection_Dont_Turn_a_Blind_Eye_CVPR_2023_paper.pdf" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">PDF</a>
+            <a href="https://openaccess.thecvf.com/content/CVPR2023/supplemental/Liang_Unknown_Sniffer_for_CVPR_2023_supplemental.pdf" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">Supp</a>
+            <a href="https://github.com/Went-Liang/UnSniffer" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">Code</a>
+            <a href="https://www.bilibili.com/video/BV1xM4y1z7Hv" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">Slides</a>
+            <a href="https://xuefeng-cvr.github.io/project_page/unsniffer_cvpr23.html" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">Website</a>
+          </div>
+          
+          <div class="badges">
+            <span class="altmetric-embed" data-hide-no-mentions="true" data-hide-less-than="15" data-badge-type="2" data-badge-popover="right"></span>
+              <span class="__dimensions_badge_embed__" data-pmid="" data-hide-zero-citations="true" data-style="small_rectangle" data-legend="hover-right" style="margin-bottom: 3px;"></span>
+          </div>
+
+          <!-- Hidden bibtex block -->
+          <div class="bibtex hidden">
+            <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@inproceedings</span><span class="p">{</span><span class="nl">unsniffer</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Liang✝, Wenteng and Xue✝, Feng and Liu, Yihao and Zhong, Guofeng and Ming, Anlong}</span><span class="p">,</span>
+  <span class="na">booktitle</span> <span class="p">=</span> <span class="s">{IEEE Conference on Computer Vision and Pattern Recognition (CVPR)}</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{Unknown Sniffer for Object Detection: Don't Turn a Blind Eye to Unknown Objects}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2023}</span><span class="p">,</span>
+<span class="p">}</span></code></pre></figure>
+          </div>
+        </div>
+      </div>
+</li>
+<li>
+<!-- _layouts/bib.html -->
+      <div class="row">
+        <div class="col-sm-2">
+<div class="abbr"><abbr class="badge"><a href="https://www.springer.com/journal/11263" rel="external nofollow noopener" target="_blank">IJCV</a></abbr></div>
+<div class="preview">
+              <figure>
+
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/publication_preview/ORG-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/publication_preview/ORG-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/publication_preview/ORG-1400.webp"></source>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/publication_preview/ORG.png" class="preview z-depth-1 rounded" width="auto" height="auto" alt="ORG.png" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+  </picture>
+
+</figure>
+</div>
+</div>
+
+        <!-- Entry bib key -->
+        <div id="ijcv_org" class="col-sm-8">
+        <!-- Title -->
+        <div class="title">Indoor Obstacle Discovery on Reflective Ground via Monocular Camera</div>
+        <!-- Author -->
+        <div class="author">
+        
+
+        <em>Feng Xue</em>, Yicong Chang, Tianxi Wang, and
+          <span class="more-authors" title="click to view 2 more authors" onclick="
+                var element = $(this);
+                element.attr('title', '');
+                var more_authors_text = element.text() == '2 more authors' ? 'Yu Zhou, Anlong Ming' : '2 more authors';
+                var cursorPosition = 0;
+                var textAdder = setInterval(function(){
+                  element.text(more_authors_text.substring(0, cursorPosition + 1));
+                  if (++cursorPosition == more_authors_text.length){
+                    clearInterval(textAdder);
+                  }
+              }, '10');
+              ">2 more authors</span>
+</div>
+
+        <!-- Journal/Book title and date -->
+        
+        
+        <div class="periodical">
+          <em>International Journal of Computer Vision (IJCV)</em>, 2023
+        </div>
+        <div class="periodical">
+          
+        </div>
+
+          <!-- Links/Buttons -->
+          <div class="links">
+            <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a>
+            <a href="https://github.com/xuefeng-cvr/IndoorObstacleDiscovery-RG" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">Code</a>
+            <a href="" class="btn btn-sm z-depth-0" role="button">Website</a>
+          </div>
+          
+          <div class="badges">
+            <span class="altmetric-embed" data-hide-no-mentions="true" data-hide-less-than="15" data-badge-type="2" data-badge-popover="right"></span>
+              <span class="__dimensions_badge_embed__" data-pmid="" data-hide-zero-citations="true" data-style="small_rectangle" data-legend="hover-right" style="margin-bottom: 3px;"></span>
+          </div>
+
+          <!-- Hidden bibtex block -->
+          <div class="bibtex hidden">
+            <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@article</span><span class="p">{</span><span class="nl">ijcv_org</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{Indoor Obstacle Discovery on Reflective Ground via Monocular Camera}</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Xue, Feng and Chang, Yicong and Wang, Tianxi and Zhou, Yu and Ming, Anlong}</span><span class="p">,</span>
+  <span class="na">journal</span> <span class="p">=</span> <span class="s">{International Journal of Computer Vision (IJCV)}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2023}</span><span class="p">,</span>
+  <span class="na">volume</span> <span class="p">=</span> <span class="s">{}</span><span class="p">,</span>
+  <span class="na">number</span> <span class="p">=</span> <span class="s">{}</span><span class="p">,</span>
+  <span class="na">pages</span> <span class="p">=</span> <span class="s">{}</span><span class="p">,</span>
+  <span class="na">xdoi</span> <span class="p">=</span> <span class="s">{}</span><span class="p">,</span>
+<span class="p">}</span></code></pre></figure>
+          </div>
+        </div>
+      </div>
+</li>
+</ol>
+<h2 class="bibliography">2022</h2>
+<ol class="bibliography"><li>
+<!-- _layouts/bib.html -->
+      <div class="row">
+        <div class="col-sm-2">
+<div class="abbr"><abbr class="badge"><a href="https://www.ieee-ras.org/conferences-workshops/fully-sponsored/icra" rel="external nofollow noopener" target="_blank">ICRA</a></abbr></div>
+<div class="preview">
+              <figure>
+
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/publication_preview/DANet.gif-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/publication_preview/DANet.gif-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/publication_preview/DANet.gif-1400.webp"></source>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/publication_preview/DANet.gif" class="preview z-depth-1 rounded" width="auto" height="auto" alt="DANet.gif" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+  </picture>
+
+</figure>
+</div>
+</div>
+
+        <!-- Entry bib key -->
+        <div id="DANet2021" class="col-sm-8">
+        <!-- Title -->
+        <div class="title">Monocular Depth Distribution Alignment with Low Computation</div>
+        <!-- Author -->
+        <div class="author">
+        
+
+        Fei Sheng✝, Feng Xue✝, Yicong Chang, and
+          <span class="more-authors" title="click to view 2 more authors" onclick="
+                var element = $(this);
+                element.attr('title', '');
+                var more_authors_text = element.text() == '2 more authors' ? 'Wenteng Liang, Anlong Ming' : '2 more authors';
+                var cursorPosition = 0;
+                var textAdder = setInterval(function(){
+                  element.text(more_authors_text.substring(0, cursorPosition + 1));
+                  if (++cursorPosition == more_authors_text.length){
+                    clearInterval(textAdder);
+                  }
+              }, '10');
+              ">2 more authors</span>
+</div>
+
+        <!-- Journal/Book title and date -->
+        
+        
+        <div class="periodical">
+          <em>In IEEE International Conference on Robotics and Automation (ICRA)</em>, 2022
+        </div>
+        <div class="periodical">
+          
+        </div>
+
+          <!-- Links/Buttons -->
+          <div class="links">
+            <a href="http://arxiv.org/abs/2203.04538" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">arXiv</a>
+            <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a>
+            <a href="https://ieeexplore.ieee.org/document/9811937" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">HTML</a>
+            <a href="https://github.com/YiLiM1/DANet" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">Code</a>
+          </div>
+          
+          <div class="badges">
+            <span class="altmetric-embed" data-hide-no-mentions="true" data-hide-less-than="15" data-badge-type="2" data-badge-popover="right"></span>
+              <span class="__dimensions_badge_embed__" data-pmid="" data-hide-zero-citations="true" data-style="small_rectangle" data-legend="hover-right" style="margin-bottom: 3px;"></span>
+          </div>
+
+          <!-- Hidden bibtex block -->
+          <div class="bibtex hidden">
+            <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@inproceedings</span><span class="p">{</span><span class="nl">DANet2021</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Sheng✝, Fei and Xue✝, Feng and Chang, Yicong and Liang, Wenteng and Ming, Anlong}</span><span class="p">,</span>
+  <span class="na">booktitle</span> <span class="p">=</span> <span class="s">{IEEE International Conference on Robotics and Automation (ICRA)}</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{Monocular Depth Distribution Alignment with Low Computation}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2022}</span><span class="p">,</span>
+  <span class="na">xdoi</span> <span class="p">=</span> <span class="s">{10.1109/ICRA46639.2022.9811937}</span><span class="p">,</span>
+<span class="p">}</span></code></pre></figure>
+          </div>
+        </div>
+      </div>
+</li></ol>
+<h2 class="bibliography">2021</h2>
+<ol class="bibliography"><li>
+<!-- _layouts/bib.html -->
+      <div class="row">
+        <div class="col-sm-2">
+<div class="abbr"><abbr class="badge"><a href="https://www.sciencedirect.com/journal/pattern-recognition" rel="external nofollow noopener" target="_blank">PR</a></abbr></div>
+<div class="preview">
+              <figure>
+
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/publication_preview/BSNet.gif-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/publication_preview/BSNet.gif-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/publication_preview/BSNet.gif-1400.webp"></source>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/publication_preview/BSNet.gif" class="preview z-depth-1 rounded" width="auto" height="auto" alt="BSNet.gif" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+  </picture>
+
+</figure>
+</div>
+</div>
+
+        <!-- Entry bib key -->
+        <div id="depthpr2021" class="col-sm-8">
+        <!-- Title -->
+        <div class="title">Boundary-induced and scene-aggregated network for monocular depth prediction</div>
+        <!-- Author -->
+        <div class="author">
+        
+
+        <em>Feng Xue</em>, Junfeng Cao, <a href="https://yuzhou.vlrlab.net/" rel="external nofollow noopener" target="_blank">Yu Zhou</a>, and
+          <span class="more-authors" title="click to view 3 more authors" onclick="
+                var element = $(this);
+                element.attr('title', '');
+                var more_authors_text = element.text() == '3 more authors' ? 'Fei Sheng, Yankai Wang, Anlong Ming' : '3 more authors';
+                var cursorPosition = 0;
+                var textAdder = setInterval(function(){
+                  element.text(more_authors_text.substring(0, cursorPosition + 1));
+                  if (++cursorPosition == more_authors_text.length){
+                    clearInterval(textAdder);
+                  }
+              }, '10');
+              ">3 more authors</span>
+</div>
+
+        <!-- Journal/Book title and date -->
+        
+        
+        <div class="periodical">
+          <em>Pattern Recognition (PR)</em>, 2021
+        </div>
+        <div class="periodical">
+          
+        </div>
+
+          <!-- Links/Buttons -->
+          <div class="links">
+            <a href="http://arxiv.org/abs/2102.13258" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">arXiv</a>
+            <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a>
+            <a href="https://www.sciencedirect.com/science/article/pii/S0031320321000881" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">HTML</a>
+            <a href="https://github.com/xuefeng-cvr/BS-Net" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">Code</a>
+            <a href="https://www.bilibili.com/video/BV1HZ4y1c7nC" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">Slides</a>
+          </div>
+          
+          <div class="badges">
+            <span class="altmetric-embed" data-hide-no-mentions="true" data-hide-less-than="15" data-badge-type="2" data-badge-popover="right"></span>
+              <span class="__dimensions_badge_embed__" data-pmid="" data-hide-zero-citations="true" data-style="small_rectangle" data-legend="hover-right" style="margin-bottom: 3px;"></span>
+          </div>
+
+          <!-- Hidden bibtex block -->
+          <div class="bibtex hidden">
+            <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@article</span><span class="p">{</span><span class="nl">depthpr2021</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{Boundary-induced and scene-aggregated network for monocular depth prediction}</span><span class="p">,</span>
+  <span class="na">journal</span> <span class="p">=</span> <span class="s">{Pattern Recognition (PR)}</span><span class="p">,</span>
+  <span class="na">volume</span> <span class="p">=</span> <span class="s">{115}</span><span class="p">,</span>
+  <span class="na">pages</span> <span class="p">=</span> <span class="s">{107901}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2021}</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Xue, Feng and Cao, Junfeng and Zhou, Yu and Sheng, Fei and Wang, Yankai and Ming, Anlong}</span><span class="p">,</span>
+  <span class="na">xdoi</span> <span class="p">=</span> <span class="s">{10.1016/j.patcog.2021.107901}</span><span class="p">,</span>
+<span class="p">}</span></code></pre></figure>
+          </div>
+        </div>
+      </div>
+</li></ol>
+<h2 class="bibliography">2020</h2>
+<ol class="bibliography"><li>
+<!-- _layouts/bib.html -->
+      <div class="row">
+        <div class="col-sm-2">
+<div class="abbr"><abbr class="badge"><a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=83" rel="external nofollow noopener" target="_blank">TIP</a></abbr></div>
+<div class="preview">
+              <figure>
+
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/publication_preview/TOD-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/publication_preview/TOD-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/publication_preview/TOD-1400.webp"></source>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/publication_preview/TOD.png" class="preview z-depth-1 rounded" width="auto" height="auto" alt="TOD.png" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+  </picture>
+
+</figure>
+</div>
+</div>
+
+        <!-- Entry bib key -->
+        <div id="tip" class="col-sm-8">
+        <!-- Title -->
+        <div class="title">Tiny Obstacle Discovery by Occlusion-aware Multilayer Regression</div>
+        <!-- Author -->
+        <div class="author">
+        
+
+        <em>Feng Xue</em>, <a href="http://vrobotit.cn/~mal" rel="external nofollow noopener" target="_blank">Anlong Ming</a>, and <a href="https://yuzhou.vlrlab.net/" rel="external nofollow noopener" target="_blank">Yu Zhou</a>
+</div>
+
+        <!-- Journal/Book title and date -->
+        
+        
+        <div class="periodical">
+          <em>IEEE Transactions on Image Processing (TIP)</em>, 2020
+        </div>
+        <div class="periodical">
+          
+        </div>
+
+          <!-- Links/Buttons -->
+          <div class="links">
+            <a href="http://arxiv.org/abs/2111.09204" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">arXiv</a>
+            <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a>
+            <a href="https://github.com/xuefeng-cvr/TOD_OMR" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">Code</a>
+          </div>
+          
+          <div class="badges">
+            <span class="altmetric-embed" data-hide-no-mentions="true" data-hide-less-than="15" data-badge-type="2" data-badge-popover="right"></span>
+              <span class="__dimensions_badge_embed__" data-pmid="" data-hide-zero-citations="true" data-style="small_rectangle" data-legend="hover-right" style="margin-bottom: 3px;"></span>
+          </div>
+
+          <!-- Hidden bibtex block -->
+          <div class="bibtex hidden">
+            <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@article</span><span class="p">{</span><span class="nl">tip</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{Tiny Obstacle Discovery by Occlusion-aware Multilayer Regression}</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Xue, Feng and Ming, Anlong and Zhou, Yu}</span><span class="p">,</span>
+  <span class="na">journal</span> <span class="p">=</span> <span class="s">{IEEE Transactions on Image Processing (TIP)}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2020}</span><span class="p">,</span>
+  <span class="na">volume</span> <span class="p">=</span> <span class="s">{29}</span><span class="p">,</span>
+  <span class="na">number</span> <span class="p">=</span> <span class="s">{}</span><span class="p">,</span>
+  <span class="na">pages</span> <span class="p">=</span> <span class="s">{9373-9386}</span><span class="p">,</span>
+  <span class="na">xdoi</span> <span class="p">=</span> <span class="s">{10.1109/TIP.2020.3026636}</span><span class="p">,</span>
+<span class="p">}</span></code></pre></figure>
+          </div>
+        </div>
+      </div>
+</li></ol>
+<h2 class="bibliography">2019</h2>
+<ol class="bibliography"><li>
+<!-- _layouts/bib.html -->
+      <div class="row">
+        <div class="col-sm-2">
+<div class="abbr"><abbr class="badge"><a href="https://www.ieee-ras.org/conferences-workshops/fully-sponsored/icra" rel="external nofollow noopener" target="_blank">ICRA</a></abbr></div>
+<div class="preview">
+              <figure>
+
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/publication_preview/ICRA2019-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/publication_preview/ICRA2019-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/publication_preview/ICRA2019-1400.webp"></source>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/publication_preview/ICRA2019.jpg" class="preview z-depth-1 rounded" width="auto" height="auto" alt="ICRA2019.jpg" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+  </picture>
+
+</figure>
+</div>
+</div>
+
+        <!-- Entry bib key -->
+        <div id="ICRA" class="col-sm-8">
+        <!-- Title -->
+        <div class="title">A Novel Multi-layer Framework for Tiny Obstacle Discovery</div>
+        <!-- Author -->
+        <div class="author">
+        
+
+        <em>Feng Xue</em>, <a href="http://vrobotit.cn/~mal" rel="external nofollow noopener" target="_blank">Anlong Ming</a>, Menghan Zhou, and
+          <span class="more-authors" title="click to view 1 more author" onclick="
+                var element = $(this);
+                element.attr('title', '');
+                var more_authors_text = element.text() == '1 more author' ? 'Yu Zhou' : '1 more author';
+                var cursorPosition = 0;
+                var textAdder = setInterval(function(){
+                  element.text(more_authors_text.substring(0, cursorPosition + 1));
+                  if (++cursorPosition == more_authors_text.length){
+                    clearInterval(textAdder);
+                  }
+              }, '10');
+              ">1 more author</span>
+</div>
+
+        <!-- Journal/Book title and date -->
+        
+        
+        <div class="periodical">
+          <em>In IEEE International Conference on Robotics and Automation (ICRA)</em>, 2019
+        </div>
+        <div class="periodical">
+          
+        </div>
+
+          <!-- Links/Buttons -->
+          <div class="links">
+            <a href="http://arxiv.org/abs/1904.10161v3" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">arXiv</a>
+            <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a>
+            <a href="https://ieeexplore.ieee.org/document/8794279" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">HTML</a>
+            <a href="https://github.com/xuefeng-cvr/Tiny-Obstacle-Discovery-ROS" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">Code</a>
+            <a href="https://www.bilibili.com/video/BV1V4411G7xz" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">Slides</a>
+          </div>
+          
+          <div class="badges">
+            <span class="altmetric-embed" data-hide-no-mentions="true" data-hide-less-than="15" data-badge-type="2" data-badge-popover="right"></span>
+              <span class="__dimensions_badge_embed__" data-pmid="" data-hide-zero-citations="true" data-style="small_rectangle" data-legend="hover-right" style="margin-bottom: 3px;"></span>
+          </div>
+
+          <!-- Hidden bibtex block -->
+          <div class="bibtex hidden">
+            <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@inproceedings</span><span class="p">{</span><span class="nl">ICRA</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Xue, Feng and Ming, Anlong and Zhou, Menghan and Zhou, Yu}</span><span class="p">,</span>
+  <span class="na">booktitle</span> <span class="p">=</span> <span class="s">{IEEE International Conference on Robotics and Automation (ICRA)}</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{A Novel Multi-layer Framework for Tiny Obstacle Discovery}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2019}</span><span class="p">,</span>
+  <span class="na">xdoi</span> <span class="p">=</span> <span class="s">{10.1109/ICRA.2019.8794279}</span><span class="p">,</span>
+<span class="p">}</span></code></pre></figure>
+          </div>
+        </div>
+      </div>
+</li></ol>
+          </div>
+
+
+
+        </article>
+
+</div>
+
+      
+    </div>
+
+    <!-- Footer -->    
+    <footer class="fixed-bottom">
+      <div class="container mt-0">
+        © Copyright 2023 Feng  Xue. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme.
+
+      </div>
+    </footer>
+
+    <!-- JavaScripts -->
+    <!-- jQuery -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <!-- Bootsrap & MDB scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha256-fgLAgv7fyCGopR/gBNq2iW3ZKIdqIcyshnUULC4vex8=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/js/mdb.min.js" integrity="sha256-NdbiivsvWt7VYCt6hYNT3h/th9vSTL4EDWeGs5SN3DA=" crossorigin="anonymous"></script>
+
+    <!-- Masonry & imagesLoaded -->
+  <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+  <script defer src="/assets/js/masonry.js" type="text/javascript"></script>
+    
+  <!-- Medium Zoom JS -->
+  <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.8/dist/medium-zoom.min.js" integrity="sha256-7PhEpEWEW0XXQ0k6kQrPKwuoIomz8R8IYyuU1Qew4P8=" crossorigin="anonymous"></script>
+  <script defer src="/assets/js/zoom.js"></script>
+
+  <!-- Bootstrap Table -->
+  <script defer src="https://unpkg.com/bootstrap-table@1.21.4/dist/bootstrap-table.min.js"></script>
+
+  <!-- Load Common JS -->
+  <script src="/assets/js/no_defer.js?d633890033921b33e0ceb13d22340a9c"></script>
+  <script defer src="/assets/js/common.js?acdb9690d7641b2f8d40529018c71a01"></script>
+  <script defer src="/assets/js/copy_code.js?c9d9dd48933de3831b3ee5ec9c209cac" type="text/javascript"></script>
+
+    
+  <script async src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script>
+  <script async src="https://badge.dimensions.ai/badge.js"></script>
+
+    <!-- MathJax -->
+  <script type="text/javascript">
+    window.MathJax = {
+      tex: {
+        tags: 'ams'
+      }
+    };
+  </script>
+  <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js"></script>
+  <script defer src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+
+    
+    
+
+<!-- Scrolling Progress Bar -->
+<script type="text/javascript">
+  /*
+   * This JavaScript code has been adapted from the article 
+   * https://css-tricks.com/reading-position-indicator/ authored by Pankaj Parashar, 
+   * published on the website https://css-tricks.com on the 7th of May, 2014.
+   * Couple of changes were made to the original code to make it compatible 
+   * with the `al-foio` theme.
+   */
+  const progressBar = $("#progress");
+  /*
+   * We set up the bar after all elements are done loading.
+   * In some cases, if the images in the page are larger than the intended
+   * size they'll have on the page, they'll be resized via CSS to accomodate
+   * the desired size. This mistake, however, breaks the computations as the
+   * scroll size is computed as soon as the elements finish loading.
+   * To account for this, a minimal delay was introduced before computing the
+   * values.
+   */
+  window.onload = function () {
+    setTimeout(progressBarSetup, 50);
+  };
+  /*
+   * We set up the bar according to the browser.
+   * If the browser supports the progress element we use that.
+   * Otherwise, we resize the bar thru CSS styling
+   */
+  function progressBarSetup() {
+    if ("max" in document.createElement("progress")) {
+      initializeProgressElement();
+      $(document).on("scroll", function() {
+        progressBar.attr({ value: getCurrentScrollPosition() });
+      });
+      $(window).on("resize", initializeProgressElement);
+    } else {
+      resizeProgressBar();
+      $(document).on("scroll", resizeProgressBar);
+      $(window).on("resize", resizeProgressBar);
+    }
+  }
+  /*
+   * The vertical scroll position is the same as the number of pixels that
+   * are hidden from view above the scrollable area. Thus, a value > 0 is
+   * how much the user has scrolled from the top
+   */
+  function getCurrentScrollPosition() {
+    return $(window).scrollTop();
+  }
+
+  function initializeProgressElement() {
+    let navbarHeight = $("#navbar").outerHeight(true);
+    $("body").css({ "padding-top": navbarHeight });
+    $("progress-container").css({ "padding-top": navbarHeight });
+    progressBar.css({ top: navbarHeight });
+    progressBar.attr({
+      max: getDistanceToScroll(),
+      value: getCurrentScrollPosition(),
+    });
+  }
+  /*
+   * The offset between the html document height and the browser viewport
+   * height will be greater than zero if vertical scroll is possible.
+   * This is the distance the user can scroll
+   */
+  function getDistanceToScroll() {
+    return $(document).height() - $(window).height();
+  }
+
+  function resizeProgressBar() {
+    progressBar.css({ width: getWidthPercentage() + "%" });
+  }
+  // The scroll ratio equals the percentage to resize the bar
+  function getWidthPercentage() {
+    return (getCurrentScrollPosition() / getDistanceToScroll()) * 100;
+  }
+</script>
+
+  </body>
+</html>
