@@ -140,7 +140,7 @@
 <!-- _layouts/bib.html -->
       <div class="row">
         <div class="col-sm-2">
-<div class="abbr"><abbr class="badge">arXiv</abbr></div>
+<div class="abbr"><abbr class="badge">ACMMM</abbr></div>
 <div class="preview">
               <figure>
 
@@ -167,14 +167,26 @@
         <div class="author">
         
 
-        Yihao Liu✝, Feng Xue✝, and <a href="http://vrobotit.cn/~mal" rel="external nofollow noopener" target="_blank">Anlong Ming</a>
+        Yihao Liu✝, Feng Xue✝, <a href="http://vrobotit.cn/~mal" rel="external nofollow noopener" target="_blank">Anlong Ming</a>, and
+          <span class="more-authors" title="click to view 3 more authors" onclick="
+                var element = $(this);
+                element.attr('title', '');
+                var more_authors_text = element.text() == '3 more authors' ? 'Mingshuai Zhao, Huadong Ma, Nicu Sebe' : '3 more authors';
+                var cursorPosition = 0;
+                var textAdder = setInterval(function(){
+                  element.text(more_authors_text.substring(0, cursorPosition + 1));
+                  if (++cursorPosition == more_authors_text.length){
+                    clearInterval(textAdder);
+                  }
+              }, '10');
+              ">3 more authors</span>
 </div>
 
         <!-- Journal/Book title and date -->
         
         
         <div class="periodical">
-          <em>arXiv e-prints</em>, Mar 2024
+          <em>In ACM Multimedia Conference</em>, 2024
         </div>
         <div class="periodical">
           
@@ -182,7 +194,7 @@
 
           <!-- Links/Buttons -->
           <div class="links">
-            <a href="http://arxiv.org/abs/2403.08556" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">arXiv</a>
+            <a href="http://arxiv.org/abs/2403.08556v2" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">arXiv</a>
             <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a>
             <a href="https://github.com/1hao-Liu/SM4Depth" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">Code</a>
             <a href="https://xuefeng-cvr.github.io/SM4Depth" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">Website</a>
@@ -195,15 +207,11 @@
 
           <!-- Hidden bibtex block -->
           <div class="bibtex hidden">
-            <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@article</span><span class="p">{</span><span class="nl">2024SM4depth</span><span class="p">,</span>
-  <span class="na">author</span> <span class="p">=</span> <span class="s">{{Liu✝}, Yihao and {Xue✝}, Feng and {Ming}, Anlong}</span><span class="p">,</span>
-  <span class="na">title</span> <span class="p">=</span> <span class="s">{{SM4Depth: Seamless Monocular Metric Depth Estimation across Multiple Cameras and Scenes by One Model}}</span><span class="p">,</span>
-  <span class="na">journal</span> <span class="p">=</span> <span class="s">{arXiv e-prints}</span><span class="p">,</span>
-  <span class="na">year</span> <span class="p">=</span> <span class="s">{2024}</span><span class="p">,</span>
-  <span class="na">month</span> <span class="p">=</span> <span class="nv">mar</span><span class="p">,</span>
-  <span class="na">archiveprefix</span> <span class="p">=</span> <span class="s">{arXiv}</span><span class="p">,</span>
-  <span class="na">primaryclass</span> <span class="p">=</span> <span class="s">{cs.LG}</span><span class="p">,</span>
-  <span class="na">adsnote</span> <span class="p">=</span> <span class="s">{Provided by the SAO/NASA Astrophysics Data System}</span><span class="p">,</span>
+            <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@inproceedings</span><span class="p">{</span><span class="nl">2024SM4depth</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{SM4Depth: Seamless Monocular Metric Depth Estimation across Multiple Cameras and Scenes by One Model}</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{{Liu✝}, Yihao and {Xue✝}, Feng and {Ming}, Anlong and Zhao, Mingshuai and Ma, Huadong and Sebe, Nicu}</span><span class="p">,</span>
+  <span class="na">booktitle</span> <span class="p">=</span> <span class="s">{ACM Multimedia Conference}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2024}</span>
 <span class="p">}</span></code></pre></figure>
           </div>
         </div>
